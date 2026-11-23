@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RESPIN Challenges</title>
+  <meta name="description" content="Websites for challenges under the RESPIN project, SPIRE Lab, IISc Bengaluru.">
+  <link rel="icon" href="data:,">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anek+Latin:wdth,wght@75..125,400..700&amp;family=Source+Serif+4:ital,opsz,wght@0,8..60,400..600;1,8..60,400&amp;display=swap">
+  <style>
+    /* Same tokens as the MADST Challenge site (madst2027/assets/css/site.css). */
+    :root {
+      --paper: #f7f8fa;
+      --surface: #ffffff;
+      --ink: #14182e;
+      --ink-2: #4a5068;
+      --indigo-900: #1a2366;
+      --indigo-700: #27338a;
+      --indigo-100: #e3e6f6;
+      --rule: #c9cddb;
+      --font-sans: "Anek Latin", system-ui, -apple-system, "Segoe UI", sans-serif;
+      --font-serif: "Source Serif 4", Georgia, "Times New Roman", serif;
+      --wrap: 52rem;
+      --gutter: 1rem;
+      --radius: 4px;
+      color-scheme: light;
+    }
+    @media (min-width: 768px) { :root { --gutter: 2rem; } }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: var(--font-sans);
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+    main { flex: 1 0 auto; }
+    h1, h2, h3 { font-weight: 600; line-height: 1.15; margin: 0; text-wrap: balance; }
+    p, ul { margin: 0; }
+    a { color: var(--indigo-700); text-decoration-thickness: 1px; text-underline-offset: 0.18em; }
+    a:hover { color: var(--indigo-900); text-decoration-thickness: 2px; }
+    :focus-visible { outline: 2px solid var(--indigo-700); outline-offset: 2px; border-radius: 2px; }
+    ::selection { background: var(--indigo-100); }
+
+    .wrap { width: 100%; max-width: calc(var(--wrap) + 2 * var(--gutter)); margin-inline: auto; padding-inline: var(--gutter); }
+
+    .skip-link {
+      position: absolute; left: 1rem; top: -100px; z-index: 10;
+      background: var(--ink); color: #fff; padding: 0.5rem 1rem;
+      border-radius: var(--radius); text-decoration: none;
+    }
+    .skip-link:focus { top: 0.5rem; color: #fff; }
+
+    .intro { padding-block: 4rem 2.5rem; }
+    .intro h1 { font-size: clamp(2.1875rem, 1.6rem + 2.6vw, 3.4375rem); font-stretch: 112%; color: var(--indigo-900); }
+    .intro p { margin-top: 1rem; max-width: 40rem; font-family: var(--font-serif); font-size: 1.125rem; color: var(--ink-2); }
+
+    .challenges h2.section-title { font-size: 1.375rem; margin-bottom: 1rem; }
+    .challenge-list { list-style: none; padding: 0; display: grid; gap: 1rem; }
+    .challenge {
+      background: var(--surface);
+      border: 1px solid var(--rule);
+      border-left: 4px solid var(--indigo-700);
+      border-radius: var(--radius);
+      padding: 1.25rem 1.5rem;
+    }
+    .challenge-meta { font-size: 0.875rem; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; color: var(--ink-2); }
+    .challenge h3 { margin-top: 0.25rem; font-size: 1.75rem; font-stretch: 112%; }
+    .challenge h3 a { color: var(--indigo-700); }
+    .challenge h3 a:hover { color: var(--indigo-900); }
+    .challenge-title { margin-top: 0.25rem; font-family: var(--font-serif); font-size: 1.125rem; color: var(--ink-2); }
+
+    .site-footer { margin-top: 4rem; background: var(--indigo-900); color: #d9dcef; padding-block: 1.5rem; font-size: 0.875rem; }
+    .site-footer a { color: #fff; }
+    .site-footer :focus-visible { outline-color: #fff; }
+
+    @media print {
+      body { background: none; }
+      .site-footer { background: none; color: #000; }
+      a, .site-footer a { color: #000; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <main id="main">
+    <section class="intro">
+      <div class="wrap">
+        <h1>RESPIN Challenges</h1>
+        <p>Websites for challenges under the <a href="https://respin.iisc.ac.in/">RESPIN project</a>, SPIRE Lab, IISc Bengaluru.</p>
+      </div>
+    </section>
+
+    <section class="challenges" aria-labelledby="challenges-title">
+      <div class="wrap">
+        <h2 class="section-title" id="challenges-title">Challenges</h2>
+        <ul class="challenge-list">
+          <!-- MADST 2027: prepared, not yet shown. Uncomment this item only after
+               (1) ASLI 2027 notifies acceptance of the challenge proposal (17 Dec 2026), and
+               (2) GitHub Pages is enabled on respin-challenges/madst2027 and
+                   https://respin-challenges.github.io/madst2027/ loads.
+          <li class="challenge">
+            <p class="challenge-meta">ASLI 2027</p>
+            <h3><a href="madst2027/">MADST</a></h3>
+            <p class="challenge-title">Multilingual Any-Direction Speech Translation Challenge</p>
+          </li>
+          -->
+          <li class="challenge">
+            <p class="challenge-meta">ASRU 2025</p>
+            <h3><a href="https://sites.google.com/view/respinasrchallenge2025/home">MADASR 2.0</a></h3>
+            <p class="challenge-title">Multi-Lingual Multi-Dialect ASR in 8 Indian Languages</p>
+          </li>
+          <li class="challenge">
+            <p class="challenge-meta">ASRU 2023</p>
+            <h3><a href="https://sites.google.com/view/respinasrchallenge2023/home">MADASR</a></h3>
+            <p class="challenge-title">Model ADaptation for ASR in low-resource Indian languages</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p><a href="https://respin.iisc.ac.in/">RESPIN project</a>, SPIRE Lab, IISc Bengaluru.</p>
+    </div>
+  </footer>
+</body>
+</html>
