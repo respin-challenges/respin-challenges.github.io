@@ -39,6 +39,16 @@ Change `Upcoming` to `Ongoing` or `Completed`. Nothing else needs to change.
 
 While a challenge is upcoming or ongoing, its card has `class="challenge is-current"`, which fills the status label and darkens the card's left edge. When it is completed, change this to `class="challenge"`.
 
+### MADST 2027 (prepared, not shown yet)
+
+The MADST 2027 card is already in `index.html`, inside an HTML comment, so it does not appear on the page. It stays hidden until ASLI 2027 accepts the MADST challenge proposal (notification expected 17 Dec 2026). To show it:
+
+1. Check that https://respin-challenges.github.io/madst2027/ loads.
+2. In `index.html`, inside the `CHALLENGE CARD: MADST 2027` block, delete the line that starts with `<!-- HIDDEN` and the line `END HIDDEN -->`. The card is already marked `Upcoming` with the `is-current` class.
+3. In `404.html`, do the same for the MADST 2027 link.
+
+HTML comments cannot be nested. To hide another card the same way, put the `<!-- HIDDEN` and `END HIDDEN -->` lines inside its `CHALLENGE CARD` markers, not around them.
+
 ### Once a year
 
 The footer year in `index.html` is typed in by hand. Update it each January.
@@ -52,7 +62,7 @@ python3 -m http.server 8000
 
 Then open http://localhost:8000/.
 
-- The MADST 2027 link (`/madst2027/`) will not load locally, because that site lives in its own repository ([respin-challenges/madst2027](https://github.com/respin-challenges/madst2027)).
+- Links to challenge sites in other repositories of this organisation, such as `/madst2027/` ([respin-challenges/madst2027](https://github.com/respin-challenges/madst2027)), will not load locally.
 - Python's server does not use `404.html` for missing pages. To see it, open http://localhost:8000/404.html.
 
 ## Deploying
