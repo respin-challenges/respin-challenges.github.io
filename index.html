@@ -4,134 +4,138 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>RESPIN Challenges</title>
-  <meta name="description" content="Websites for challenges under the RESPIN project, SPIRE Lab, IISc Bengaluru.">
-  <link rel="icon" href="data:,">
+  <meta name="description" content="Shared tasks on speech technology for Indian languages, from the RESPIN project at SPIRE Lab, IISc Bengaluru.">
+  <link rel="canonical" href="https://respin-challenges.github.io/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="RESPIN Challenges">
+  <meta property="og:title" content="RESPIN Challenges">
+  <meta property="og:description" content="Shared tasks on speech technology for Indian languages, from the RESPIN project at SPIRE Lab, IISc Bengaluru.">
+  <meta property="og:url" content="https://respin-challenges.github.io/">
+  <meta name="theme-color" content="#1a2366">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anek+Latin:wdth,wght@75..125,400..700&amp;family=Source+Serif+4:ital,opsz,wght@0,8..60,400..600;1,8..60,400&amp;display=swap">
-  <style>
-    /* Same tokens as the MADST Challenge site (madst2027/assets/css/site.css). */
-    :root {
-      --paper: #f7f8fa;
-      --surface: #ffffff;
-      --ink: #14182e;
-      --ink-2: #4a5068;
-      --indigo-900: #1a2366;
-      --indigo-700: #27338a;
-      --indigo-100: #e3e6f6;
-      --rule: #c9cddb;
-      --font-sans: "Anek Latin", system-ui, -apple-system, "Segoe UI", sans-serif;
-      --font-serif: "Source Serif 4", Georgia, "Times New Roman", serif;
-      --wrap: 52rem;
-      --gutter: 1rem;
-      --radius: 4px;
-      color-scheme: light;
-    }
-    @media (min-width: 768px) { :root { --gutter: 2rem; } }
-
-    *, *::before, *::after { box-sizing: border-box; }
-    html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
-    body {
-      margin: 0;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      background: var(--paper);
-      color: var(--ink);
-      font-family: var(--font-sans);
-      font-size: 1rem;
-      line-height: 1.5;
-    }
-    main { flex: 1 0 auto; }
-    h1, h2, h3 { font-weight: 600; line-height: 1.15; margin: 0; text-wrap: balance; }
-    p, ul { margin: 0; }
-    a { color: var(--indigo-700); text-decoration-thickness: 1px; text-underline-offset: 0.18em; }
-    a:hover { color: var(--indigo-900); text-decoration-thickness: 2px; }
-    :focus-visible { outline: 2px solid var(--indigo-700); outline-offset: 2px; border-radius: 2px; }
-    ::selection { background: var(--indigo-100); }
-
-    .wrap { width: 100%; max-width: calc(var(--wrap) + 2 * var(--gutter)); margin-inline: auto; padding-inline: var(--gutter); }
-
-    .skip-link {
-      position: absolute; left: 1rem; top: -100px; z-index: 10;
-      background: var(--ink); color: #fff; padding: 0.5rem 1rem;
-      border-radius: var(--radius); text-decoration: none;
-    }
-    .skip-link:focus { top: 0.5rem; color: #fff; }
-
-    .intro { padding-block: 4rem 2.5rem; }
-    .intro h1 { font-size: clamp(2.1875rem, 1.6rem + 2.6vw, 3.4375rem); font-stretch: 112%; color: var(--indigo-900); }
-    .intro p { margin-top: 1rem; max-width: 40rem; font-family: var(--font-serif); font-size: 1.125rem; color: var(--ink-2); }
-
-    .challenges h2.section-title { font-size: 1.375rem; margin-bottom: 1rem; }
-    .challenge-list { list-style: none; padding: 0; display: grid; gap: 1rem; }
-    .challenge {
-      background: var(--surface);
-      border: 1px solid var(--rule);
-      border-left: 4px solid var(--indigo-700);
-      border-radius: var(--radius);
-      padding: 1.25rem 1.5rem;
-    }
-    .challenge-meta { font-size: 0.875rem; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; color: var(--ink-2); }
-    .challenge h3 { margin-top: 0.25rem; font-size: 1.75rem; font-stretch: 112%; }
-    .challenge h3 a { color: var(--indigo-700); }
-    .challenge h3 a:hover { color: var(--indigo-900); }
-    .challenge-title { margin-top: 0.25rem; font-family: var(--font-serif); font-size: 1.125rem; color: var(--ink-2); }
-
-    .site-footer { margin-top: 4rem; background: var(--indigo-900); color: #d9dcef; padding-block: 1.5rem; font-size: 0.875rem; }
-    .site-footer a { color: #fff; }
-    .site-footer :focus-visible { outline-color: #fff; }
-
-    @media print {
-      body { background: none; }
-      .site-footer { background: none; color: #000; }
-      a, .site-footer a { color: #000; }
-    }
-  </style>
+  <link rel="stylesheet" href="assets/css/site.css">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
+  <header class="intro">
+    <div class="wrap">
+      <h1>RESPIN Challenges</h1>
+      <p class="lede">Shared tasks on speech technology for Indian languages, from the RESPIN project at SPIRE Lab, IISc Bengaluru.</p>
+    </div>
+  </header>
+
   <main id="main">
-    <section class="intro">
+
+    <section class="band" aria-labelledby="about-h">
       <div class="wrap">
-        <h1>RESPIN Challenges</h1>
-        <p>Websites for challenges under the <a href="https://respin.iisc.ac.in/">RESPIN project</a>, SPIRE Lab, IISc Bengaluru.</p>
+        <h2 id="about-h">About RESPIN</h2>
+        <div class="prose">
+          <p><a href="https://respin.iisc.ac.in/">RESPIN</a> (Speech Recognition in Agriculture and Finance for the Poor in India) is a project at SPIRE Lab, IISc Bengaluru. Its RESPIN-S1.0 corpus has more than 10,000 hours of read speech in over 38 dialects of nine Indian languages, from the agriculture and finance domains. The challenges below build on RESPIN data.</p>
+        </div>
       </div>
     </section>
 
-    <section class="challenges" aria-labelledby="challenges-title">
+    <section class="band" aria-labelledby="challenges-h">
       <div class="wrap">
-        <h2 class="section-title" id="challenges-title">Challenges</h2>
+        <h2 id="challenges-h">Challenges</h2>
+
+        <!-- ================================================================
+             CHALLENGES: one <li class="challenge"> block per challenge,
+             newest first.
+
+             To add a challenge, copy everything from one "CHALLENGE CARD"
+             comment to the matching "/CHALLENGE CARD" comment, paste it at
+             the top of the list and edit the text and link.
+
+             Status: change the one word inside <span class="status">
+             (Upcoming, Ongoing or Completed).
+             Use class="challenge is-current" while a challenge is upcoming or
+             ongoing (filled status label and darker edge), and
+             class="challenge" once it is completed.
+             ================================================================ -->
         <ul class="challenge-list">
-          <!-- MADST 2027: prepared, not yet shown. Uncomment this item only after
-               (1) ASLI 2027 notifies acceptance of the challenge proposal (17 Dec 2026), and
-               (2) GitHub Pages is enabled on respin-challenges/madst2027 and
-                   https://respin-challenges.github.io/madst2027/ loads.
-          <li class="challenge">
-            <p class="challenge-meta">ASLI 2027</p>
-            <h3><a href="madst2027/">MADST</a></h3>
-            <p class="challenge-title">Multilingual Any-Direction Speech Translation Challenge</p>
+
+          <!-- CHALLENGE CARD: MADST 2027 -->
+          <li class="challenge is-current">
+            <div class="challenge-head">
+              <h3 class="challenge-name"><a href="/madst2027/">MADST 2027</a></h3>
+              <span class="status"><span class="visually-hidden">Status: </span>Upcoming</span>
+            </div>
+            <p class="challenge-venue">IEEE ASLI 2027, Singapore</p>
+            <p class="challenge-title">MADST: Multilingual Any-Direction Speech Translation Challenge across Nine Indian Languages</p>
+            <p class="challenge-desc">Translate speech between any two of nine Indian languages, into text or directly into speech.</p>
           </li>
-          -->
+          <!-- /CHALLENGE CARD: MADST 2027 -->
+
+          <!-- CHALLENGE CARD: MADASR 2.0 -->
           <li class="challenge">
-            <p class="challenge-meta">ASRU 2025</p>
-            <h3><a href="https://sites.google.com/view/respinasrchallenge2025/home">MADASR 2.0</a></h3>
-            <p class="challenge-title">Multi-Lingual Multi-Dialect ASR in 8 Indian Languages</p>
+            <div class="challenge-head">
+              <h3 class="challenge-name"><a href="https://sites.google.com/view/respinasrchallenge2025/home">MADASR 2.0</a></h3>
+              <span class="status"><span class="visually-hidden">Status: </span>Completed</span>
+            </div>
+            <p class="challenge-venue">ASRU 2025</p>
+            <p class="challenge-title">MADASR 2.0: Multi-Lingual Multi-Dialect ASR in 8 Indian Languages</p>
+            <p class="challenge-desc">Multilingual ASR across 33 dialects of eight Indian languages: Bengali, Bhojpuri, Chhattisgarhi, Kannada, Magahi, Maithili, Marathi and Telugu.</p>
           </li>
+          <!-- /CHALLENGE CARD: MADASR 2.0 -->
+
+          <!-- CHALLENGE CARD: MADASR -->
           <li class="challenge">
-            <p class="challenge-meta">ASRU 2023</p>
-            <h3><a href="https://sites.google.com/view/respinasrchallenge2023/home">MADASR</a></h3>
-            <p class="challenge-title">Model ADaptation for ASR in low-resource Indian languages</p>
+            <div class="challenge-head">
+              <h3 class="challenge-name"><a href="https://sites.google.com/view/respinasrchallenge2023/home">MADASR</a></h3>
+              <span class="status"><span class="visually-hidden">Status: </span>Completed</span>
+            </div>
+            <p class="challenge-venue">ASRU 2023</p>
+            <p class="challenge-title">MADASR: Model ADaptation for ASR in low-resource Indian languages</p>
+            <p class="challenge-desc">ASR for two low-resource Indian languages, Bengali and Bhojpuri, exploring how much acoustic and text data each matter.</p>
+          </li>
+          <!-- /CHALLENGE CARD: MADASR -->
+
+        </ul>
+        <!-- /CHALLENGES -->
+      </div>
+    </section>
+
+    <section class="band" aria-labelledby="resources-h">
+      <div class="wrap">
+        <h2 id="resources-h">Datasets and resources</h2>
+        <ul class="resource-list">
+          <li>
+            <a href="https://papers.neurips.cc/paper_files/paper/2025/hash/d88714d4f2c1e826d33d6c1eb1497ec9-Abstract-Datasets_and_Benchmarks_Track.html">RESPIN-S1.0 paper</a>
+            <span class="meta">NeurIPS 2025 Datasets and Benchmarks Track</span>
+          </li>
+          <li>
+            <a href="https://aikosh.indiaai.gov.in/home/datasets/details/iisc_respin_s1_0_corpus.html">RESPIN-S1.0 corpus</a>
+            <span class="meta">On AIKosh</span>
+          </li>
+          <li>
+            <a href="https://github.com/labspire/RESPIN">RESPIN models and recipes</a>
+            <span class="meta">On GitHub</span>
           </li>
         </ul>
       </div>
     </section>
+
+    <section class="band" aria-labelledby="contact-h">
+      <div class="wrap">
+        <h2 id="contact-h">Contact</h2>
+        <div class="prose">
+          <p>For questions about the RESPIN challenges, email <a href="mailto:contact.respin@iisc.ac.in">contact.respin@iisc.ac.in</a>.</p>
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <footer class="site-footer">
     <div class="wrap">
-      <p><a href="https://respin.iisc.ac.in/">RESPIN project</a>, SPIRE Lab, IISc Bengaluru.</p>
+      <p>SPIRE Lab, Indian Institute of Science, Bengaluru</p>
+      <!-- Update the year each January. -->
+      <p>2026</p>
     </div>
   </footer>
 </body>

@@ -1,0 +1,289 @@
+/* =====================================================================
+   RESPIN Challenges - site stylesheet
+   Trimmed from the MADST 2027 site (madst2027/assets/css/site.css) so the
+   two sites look like one family. Tokens first; components after.
+   No framework, no build step.
+   ===================================================================== */
+
+:root {
+  /* Colour: same indigo scale as the MADST site */
+  --paper: #f7f8fa;
+  --surface: #ffffff;
+  --ink: #14182e;
+  --ink-2: #4a5068;
+  --indigo-900: #1a2366;
+  --indigo-700: #27338a;
+  --indigo-300: #a3ace0;
+  --indigo-100: #e3e6f6;
+  --rule: #c9cddb;
+  --rule-soft: #e2e5ee;
+
+  /* Type */
+  --font-sans: "Anek Latin", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-serif: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --step--1: 0.875rem;  /* 14 */
+  --step-0: 1rem;       /* 16 */
+  --step-1: 1.125rem;   /* 18 body prose */
+  --step-2: 1.375rem;   /* 22 */
+  --step-3: 1.75rem;    /* 28 */
+  --step-6: 3.4375rem;  /* 55 */
+
+  /* Space (8-pt rhythm) */
+  --s-1: 0.25rem;
+  --s-2: 0.5rem;
+  --s-3: 0.75rem;
+  --s-4: 1rem;
+  --s-5: 1.5rem;
+  --s-6: 2rem;
+  --s-7: 3rem;
+  --s-8: 4rem;
+
+  --wrap: 52rem;        /* single column; narrower than the MADST site */
+  --measure: 40rem;     /* prose column */
+  --radius: 4px;
+  --gutter: 1rem;
+
+  color-scheme: light;
+}
+
+@media (min-width: 768px) {
+  :root { --gutter: 2rem; }
+}
+
+/* ---------- Base ---------- */
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-size: var(--step-0);
+  line-height: 1.5;
+  font-feature-settings: "kern" 1;
+}
+
+main { flex: 1 0 auto; }
+
+h1, h2, h3 {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  line-height: 1.15;
+  margin: 0;
+  text-wrap: balance;
+  color: var(--ink);
+}
+
+p, ul { margin: 0; }
+
+a {
+  color: var(--indigo-700);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+}
+a:hover { color: var(--indigo-900); text-decoration-thickness: 2px; }
+
+:focus-visible {
+  outline: 2px solid var(--indigo-700);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+::selection { background: var(--indigo-100); }
+
+.wrap {
+  width: 100%;
+  max-width: calc(var(--wrap) + 2 * var(--gutter));
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0 0 0 0);
+  white-space: nowrap; border: 0;
+}
+
+.skip-link {
+  position: absolute;
+  left: var(--s-4);
+  top: -100px;
+  z-index: 100;
+  background: var(--ink);
+  color: #fff;
+  padding: var(--s-2) var(--s-4);
+  border-radius: var(--radius);
+  text-decoration: none;
+}
+.skip-link:focus { top: var(--s-2); color: #fff; }
+
+/* ---------- Intro ---------- */
+.intro {
+  padding-block: var(--s-8) var(--s-7);
+  border-bottom: 1px solid var(--rule);
+}
+.intro h1 {
+  font-size: clamp(2.25rem, 1.4rem + 3.4vw, var(--step-6));
+  font-weight: 650;
+  font-stretch: 88%;
+  letter-spacing: -0.015em;
+  line-height: 1.02;
+  color: var(--indigo-900);
+}
+.intro .lede {
+  margin-top: var(--s-5);
+  max-width: 36rem;
+  font-family: var(--font-serif);
+  font-size: var(--step-2);
+  line-height: 1.45;
+  color: var(--ink);
+}
+@media (max-width: 767px) {
+  .intro { padding-block: var(--s-6); }
+  .intro .lede { font-size: var(--step-1); }
+}
+
+/* ---------- Sections ---------- */
+.band { padding-block: var(--s-7); }
+.band + .band { border-top: 1px solid var(--rule); }
+.band h2 { font-size: var(--step-3); margin-bottom: var(--s-5); }
+
+.prose {
+  max-width: var(--measure);
+  font-family: var(--font-serif);
+  font-size: var(--step-1);
+  line-height: 1.65;
+}
+.prose > * + * { margin-top: var(--s-4); }
+
+/* ---------- Challenge cards ---------- */
+.challenge-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: var(--s-4);
+}
+.challenge {
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  border-left: 4px solid var(--indigo-300);
+  border-radius: var(--radius);
+  padding: var(--s-5);
+}
+.challenge.is-current { border-left-color: var(--indigo-700); }
+
+.challenge-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--s-2) var(--s-4);
+}
+.challenge-name {
+  font-size: var(--step-3);
+  font-stretch: 112%;
+}
+.challenge-venue {
+  margin-top: var(--s-1);
+  font-size: var(--step--1);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--ink-2);
+}
+.challenge-title {
+  margin-top: var(--s-3);
+  font-family: var(--font-serif);
+  font-size: var(--step-1);
+  line-height: 1.45;
+  color: var(--ink);
+}
+.challenge-desc {
+  margin-top: var(--s-2);
+  max-width: var(--measure);
+  color: var(--ink-2);
+}
+@media (max-width: 559px) {
+  .challenge { padding: var(--s-4); }
+  .challenge-name { font-size: var(--step-2); }
+}
+
+/* Status label: always text, never colour alone. Current challenges
+   (class "is-current" on the card) get a filled label. */
+.status {
+  display: inline-block;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  line-height: 1.4;
+  padding: 0.1em 0.55em;
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  background: var(--surface);
+  color: var(--ink-2);
+  white-space: nowrap;
+}
+.is-current .status {
+  background: var(--indigo-700);
+  border-color: var(--indigo-700);
+  color: #fff;
+}
+
+/* ---------- Resources ---------- */
+.resource-list {
+  list-style: none;
+  padding: 0;
+  max-width: 48rem;
+  border-top: 1px solid var(--ink);
+}
+.resource-list li {
+  padding: var(--s-4) 0;
+  border-bottom: 1px solid var(--rule-soft);
+}
+.resource-list a { font-size: var(--step-1); font-weight: 600; }
+.resource-list .meta {
+  display: block;
+  margin-top: var(--s-1);
+  font-size: var(--step--1);
+  color: var(--ink-2);
+}
+
+/* ---------- Footer ---------- */
+.site-footer {
+  margin-top: auto;
+  background: var(--indigo-900);
+  color: #d9dcef;
+  font-size: var(--step--1);
+}
+.site-footer .wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: var(--s-2) var(--s-5);
+  padding-block: var(--s-5);
+}
+.site-footer a { color: #fff; }
+.site-footer :focus-visible { outline-color: #fff; }
+
+/* ---------- Motion preferences ---------- */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; scroll-behavior: auto !important; }
+}
+
+/* ---------- Print ---------- */
+@media print {
+  body { background: #fff; }
+  .skip-link { display: none; }
+  .challenge { break-inside: avoid; }
+  .site-footer { background: none; color: #000; }
+  a, .site-footer a { color: #000; }
+}

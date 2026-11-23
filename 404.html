@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Page not found | RESPIN Challenges</title>
+  <meta name="robots" content="noindex">
+  <!--
+    GitHub Pages serves this file for any missing URL on the site, at that URL
+    (for example /foo/bar/). Relative paths would resolve against that missing
+    folder and break, so this page keeps its styles and icon inline and links
+    home with "/". Keep it that way.
+  -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231a2366'/%3E%3Cpath d='M10.5 24V8h6a4.5 4.5 0 0 1 0 9h-6M16 17l6 7' fill='none' stroke='%23ffffff' stroke-width='3'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anek+Latin:wdth,wght@75..125,400..700&amp;family=Source+Serif+4:ital,opsz,wght@0,8..60,400..600;1,8..60,400&amp;display=swap">
+  <style>
+    /* Same tokens as assets/css/site.css */
+    :root {
+      --paper: #f7f8fa;
+      --ink: #14182e;
+      --ink-2: #4a5068;
+      --indigo-900: #1a2366;
+      --indigo-700: #27338a;
+      --indigo-100: #e3e6f6;
+      --font-sans: "Anek Latin", system-ui, -apple-system, "Segoe UI", sans-serif;
+      --font-serif: "Source Serif 4", Georgia, "Times New Roman", serif;
+      --gutter: 1rem;
+      color-scheme: light;
+    }
+    @media (min-width: 768px) { :root { --gutter: 2rem; } }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+    body {
+      margin: 0; min-height: 100vh; display: flex; flex-direction: column;
+      background: var(--paper); color: var(--ink);
+      font-family: var(--font-sans); font-size: 1rem; line-height: 1.5;
+    }
+    main { flex: 1 0 auto; }
+    a { color: var(--indigo-700); text-decoration-thickness: 1px; text-underline-offset: 0.18em; }
+    a:hover { color: var(--indigo-900); text-decoration-thickness: 2px; }
+    :focus-visible { outline: 2px solid var(--indigo-700); outline-offset: 2px; border-radius: 2px; }
+    ::selection { background: var(--indigo-100); }
+    .wrap { width: 100%; max-width: calc(52rem + 2 * var(--gutter)); margin-inline: auto; padding-inline: var(--gutter); }
+    .notfound { padding-block: 6rem 4rem; }
+    .code { margin: 0; font-size: 0.875rem; color: var(--ink-2); }
+    h1 { margin: 0.5rem 0 0; font-size: clamp(2.25rem, 1.6rem + 2.6vw, 2.75rem); font-weight: 600; line-height: 1.1; text-wrap: balance; }
+    .notfound p.lede { margin: 1rem 0 0; max-width: 36rem; font-family: var(--font-serif); font-size: 1.125rem; }
+    .links { margin: 2rem 0 0; padding: 0; list-style: none; display: grid; gap: 0.5rem; }
+    .links a { font-size: 1.125rem; font-weight: 600; }
+    .site-footer { margin-top: auto; background: var(--indigo-900); color: #d9dcef; font-size: 0.875rem; }
+    .site-footer .wrap { padding-block: 1.5rem; }
+    .site-footer p { margin: 0; }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="wrap notfound">
+      <p class="code">Error 404</p>
+      <h1>This page does not exist</h1>
+      <p class="lede">The address may be mistyped, or the page may have moved.</p>
+      <ul class="links">
+        <li><a href="/">Go to RESPIN Challenges</a></li>
+        <li><a href="/madst2027/">MADST 2027</a></li>
+      </ul>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>SPIRE Lab, Indian Institute of Science, Bengaluru</p>
+    </div>
+  </footer>
+</body>
+</html>
